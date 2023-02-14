@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    min-width: 320px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.headporttext{
+    width: 635px;
+}
+.conteinerbg{
+    background: #E9ECEF;
+    padding: 64px 0px 64px 0px;
+}
+th{
+    border: 1px solid #DEE2E6;
+    color: #007BFF;
+    text-decoration: none;
+}
+td{
+    border: 1px solid #DEE2E6;
+}
+.date{
+    color: #000000;
+}

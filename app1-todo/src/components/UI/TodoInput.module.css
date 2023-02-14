@@ -1,0 +1,36 @@
+.inp{
+    margin:5px 5px 10px 5px;
+    width: 80%;
+}
+.myBtn,.myBtn2{
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    background: #6F2232;
+    color: #FFF;
+}
+.myBtn{
+    height: 50px;
+    margin: 5px;
+}
+.myBtn2{
+    position: relative;
+    float: right;
+    top:-25px
+}
+.bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tit{
+    padding-left:20px;
+    font-size: 25px;
+}
+.todo{
+    padding: 15px 15px 15px 20px;
+    color: #FFF;
+    border:solid 1px#6F2232 ;
+    border-radius: 30px;
+    margin-top: 10px;
+}

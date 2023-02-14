@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css"></link>
+</head>
+<body>
+<div> 
+    <h1 style="display: flex;justify-content: center;color: white;">
+        Слайдер
+    </h1>
+    <div >
+        <div class="sus">
+            <p id="pags" style="
+            position: relative;
+            "></p>
+            <button  class="back" onclick="back()">←</button>
+            
+            <div id="slider">
+            </div>
+            <button class="next" onclick="netx()">→</button>
+        </div>
+    </div>
+    <input type="checkbox" id="check1" checked><span style="color: #fff;">auto</span>
+</div>
+<script>
+let b= -1;
+    function back(){
+        slides[b] - 1;
+    }
+    function next(){
+        b += 1;
+    }
+
+    class Slider {
+        slides;
+        loop;
+        navs;
+        pags;
+        auto;
+        delay;
+        constructor(slides,loop,navs,pags,auto,delay){
+            this.slides = slides;
+            this.loop = navs.loop;
+            this.navs = navs.navs;
+            this.pags = navs.pags;
+            this.auto = navs.auto;
+            this.delay = navs.delay;  
+        }
+    }
+
+const slides = [
+    {
+        img: 'https://phonoteka.org/uploads/posts/2022-02/1644366524_38-phonoteka-org-p-shirokii-fon-39.jpg',
+        text: 'Caption Text 1'
+    },
+    {
+        img: 'https://img2.goodfon.ru/original/2560x1698/2/15/nebo-oblaka-gory-sneg-derevya-4255.jpg',
+        text: 'Caption Text 2'
+    },
+    {
+        img: 'https://pic.xenomorph.ru/2013-04/1365242838_16.jpg',
+        text: 'Caption Text 3'
+    },
+];
+let check1 = document.getElementById("check1")
+if(check1.checked){
+    let autozn = true
+}
+else{
+    let autozn = false
+}
+
+const Slider2 = new Slider(
+    slides, // слайды
+    'slider', // id для вставки в html
+    {
+        loop: true, 
+        navs: true,
+        pags: true,
+        auto: true,
+        delay: 3,
+    }
+);
+let key;
+let kar = document.getElementById('slider')
+
+function pokaz(){
+    kar.innerHTML +=`<div class="kar">
+    <img src="${slides[b].img}">
+    </div>
+
+    `
+    }
+let a = 0;
+let udal1 = document.getElementsByClassName("kar")
+function udal(){
+    for(let abc = udal1.length-1; abc >= 0; abc--){
+    udal1[abc].remove()
+}
+}
+let pagspokaz = document.querySelector("#pags")
+function pokaznum(){
+    pagspokaz.innerHTML = `${b+1}/${slides.length}`
+}
+let ab = 1,ba = 0;
+let butt1 = document.querySelector(".next")
+kar.innerHTML +=`<div class="kar">
+        <img src="${slides[b+1].img}"></div>`
+b++;
+pokaznum()
+butt1.onclick = function(){
+    udal1 = document.getElementsByClassName("kar")
+    udal();
+    b++;
+    if(Slider2.loop == true){
+        if(b == slides.length){
+            b = 0
+        }
+    }
+    else{
+        if (b == 3){
+            alert("Сладов больше нет! Измените значение loop на \"true\" и перезагрузите страницу")
+
+        }
+    }
+    kar.innerHTML +=`<div class="kar">
+        <img src="${slides[b].img}"></div>`
+    pokaznum()
+}
+
+let butt2 = document.querySelector(".back")
+butt2.onclick = function(){
+    udal1 = document.getElementsByClassName("kar")
+    console.log(udal1.length)
+    udal();
+    b--;
+        if(b <= -1){
+            b = slides.length-1;
+        }
+    kar.innerHTML +=`<div class="kar">
+        <img src="${slides[b].img}"></div>`
+    pokaznum()
+}
+if(Slider2.auto == true){
+    setInterval(() => {
+        udal1 = document.getElementsByClassName("kar")
+    udal();
+    b++;
+    if(Slider2.loop == true){
+        if(b == slides.length){
+            b = 0
+        }
+    }
+    else{
+        if (b == 3){
+            alert("Сладов больше нет! Измените значение loop на \"true\" и перезагрузите страницу")
+
+        }
+    }
+    kar.innerHTML +=`<div class="kar">
+        <img src="${slides[b].img}"></div>`
+    pokaznum()
+    }, Slider2.delay*1000);
+}
+</script>
+</body>
+</html>

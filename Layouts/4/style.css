@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+body{
+    font-family: Outfit;
+}
+.barimg{
+    margin-right: 21px;
+    margin-bottom:0px;
+    padding-top: 0px;
+}
+.barbutton{
+    margin-bottom:0px;
+    margin-top: 7px;
+    height: 40px;
+    width: 144px;
+    font-size: 13px;
+    color:rgb(124, 124, 124);
+    text-align: center;
+    background: #2F2F2F;
+    border-radius: 50px;
+    border: 0px;
+    transition-property: background, top,box-shadow,color;
+    transition-duration: 0.5s;
+}
+.barbutton:hover{
+    background: #757474;
+    color:aliceblue;
+    box-shadow: 0 3px 3px #c2c2c27c;;
+}
+.EXTRAORDINARYNFTs{
+    color: #82CBAC;
+    font-size: 13px;
+}
+
+
+
+.change{
+    color: #2F2F2F;
+    font-size: 64px;
+}
+.foto1,.foto2,.foto3,.foto4{
+    position: relative;
+}
+.foto1{
+    size: 100%;
+    bottom: -133px;
+    right: -20px;
+}
+.foto2{
+    right: -180px;
+    top:-80px;
+    animation-name: myimg;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+.foto2:hover{
+    animation-play-state:running;
+}
+
+@keyframes myimg{
+    0%{
+    }
+    100%{
+        right: -250px;
+        top: -10px;
+    }
+}
+.foto3{
+    top: -600px;
+    right: 40px;
+}
+.foto4{
+    top: -260px;
+    right: -70px;
+}
+.prost{
+    overflow: hidden;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prokrut{
+    display: flex;
+    position: relative;
+    overflow-x: none;
+    animation-name: prokrut_nft;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+.prokrut:hover{
+    animation-play-state: running;
+}
+
+
+@keyframes prokrut_nft{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 850px;
+    }
+}
+.jack{
+    height: 50px;
+    width: 179px;
+    font-size: 22px;
+    color: #2F2F2F;
+    border-radius: 30px;
+    background: #fff;
+    border: 1px solid #2F2F2F;
+    transition-property: background, top,box-shadow,color;
+    transition-duration: 0.5s;
+}
+.jack:hover{
+    background: #2F2F2F;
+    color:aliceblue;
+    box-shadow: 0 3px 3px #c2c2c27c;
+}
+.names{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 60px;
+}
+.d01, .d02, .d03{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 60px;
+    color: #fff;
+    height: 35px;
+}
+.d01{
+    background: #82CBAC;
+    border: 1px solid #82CBAC;
+}
+.d02{
+    background: #FF7F96;
+    border: 1px solid #FF7F96;
+}
+.d03{
+    background: #EAD71B;
+    border: 1px solid #EAD71B;
+}
+.fourpeoplebg{
+    background: #82CBAC;
+    height: 623px;
+    margin-top: 120px;
+
+}
+.fourpeople{
+    position: relative;
+    z-index: 7;
+    top:-192px;
+}
+.img1{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+.img1:hover{
+    opacity: 1;
+}
+.collectibles{
+    font-size: 26px;
+    margin: 25px 28px 25px 28px;
+    padding: 0px 0px 20px 20px;
+}
+.collectibles:hover{
+    border-radius: 0px 0px 15px 15px ;
+    box-shadow:  0 3px 3px #c2c2c27c;;
+}
+.viewall{
+    height: 44px;
+    width: 135px;
+    background: #2F2F2F;
+    color: #fff;
+    border: 1px solid #2F2F2F;
+    border-radius: 3px;
+}
+.grid_item{
+}
+.text_grid{
+    display: flex;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.squere, .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    margin-top: -5px;
+}
+.squere{
+    background:  rgba(201, 201, 201, 0.658);
+    margin-left: 60px;
+}
+.circle {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #FF7F96;
+    margin-left: 10px;
+}
+.form-select{
+    font-size: 22px;
+    margin-bottom: 30px;
+    border: none;
+}
+.op123{
+    border: none;
+}
+.form-control{
+    border:none;
+    border-radius: 40px;
+    color: #2f2f2f1e;
+    width: 327px;
+    background: #F6F6F6;
+}
+.button3{
+    top: -6px;
+    margin-left: 15px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius:50px;
+}
