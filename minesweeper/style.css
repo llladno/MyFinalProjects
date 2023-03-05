@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+#place {
+  display: grid;
+  grid-template-columns: repeat(16, 32px);
+}
+#bar {
+  text-align: center;
+}
+.navigbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+button {
+    font-family: "Montserrat Alternates", sans-serif;
+font-size: 28px;
+  height: 70px;
+  width: 200px;
+  color: white;
+  border: none;
+  background: #444;
+}
+.cel {
+  background-color: rgb(201, 201, 201);
+  height: 30px;
+  width: 30px;
+  margin-bottom: 2px;
+  color: transparent;
+}
+
+.mine {
+  background-color: rgb(201, 201, 201);
+  height: 30px;
+  width: 30px;
+  margin-bottom: 2px;
+}
+.show {
+  text-align: center;
+  background: rgb(128, 128, 128);
+  height: 30px;
+  color: white;
+  width: 30px;
+  margin-bottom: 2px;
+}
+.boom {
+  background-color: rgb(255, 0, 0);
+}
+.timer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time {
+  width: 200px;
+  height: 70px;
+  background: #444;
+  color: white;
+  font-size: 40px;
+
+  text-align: center;
+}
+.flag {
+  width: 0;
+  height: 0;
+  border-top: 30px solid red;
+  border-right: 30px solid transparent;
+}
+.que {
+  text-align: center;
+  background: rgb(201, 201, 201)ua;
+  height: 30px;
+  width: 30px;
+  margin-bottom: 2px;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+button:focus {
+    background: #747474;
+    box-shadow: 1px 1px 5px 0px #444;
+}
